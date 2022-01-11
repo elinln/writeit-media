@@ -23,7 +23,7 @@ export default class App extends Component {
       <Router>
         <div>
           <div>
-            <Navbar responsive expand={false} style={{ backgroundColor: "#FFDD8F", color: "white" }}>
+            <Navbar className="appHeader" responsive="true" expand={false} >
               <Container fluid>
                 <div></div>
                 <Navbar.Brand style={{ color: "white", display: "flex", justifyContent: "center" }} href="/"> <img style={{ height: "100px", width: "auto", margin: "0" }} alt="Logga" src={Logo} ></img></Navbar.Brand>
@@ -31,7 +31,7 @@ export default class App extends Component {
                 <Navbar.Offcanvas
                   id="offcanvasNavbar"
                   aria-labelledby="offcanvasNavbarLabel"
-                  placement="start"
+                  placement="end"
                 >
                   <Offcanvas.Header closeButton>
                     <Offcanvas.Title id="offcanvasNavbarLabel">write IT media</Offcanvas.Title>
@@ -41,7 +41,7 @@ export default class App extends Component {
                       Start
                     </Link>
                     <Link to={"/aboutUs"} style={{ padding: "12px", textDecoration: "none", color: "black" }}>
-                      About us
+                      FAQ
                     </Link>
                     <Link to={"/contactUs"} style={{ padding: "12px", textDecoration: "none", color: "black" }}>
                       Contact us
