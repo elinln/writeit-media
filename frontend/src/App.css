@@ -5,3 +5,17 @@ body {
     height: 100%;
 }
 
+.appHeader {
+  border-bottom-right-radius: 35px;
+  border-bottom-left-radius: 35px;
+  background: #FFDD8F;
+  color: white
+}
+
+.aboutItem:active {
+  color: #FFDD8F;
+}
+
+.aboutItem {
+  color: "#FFDD8F";
+}
