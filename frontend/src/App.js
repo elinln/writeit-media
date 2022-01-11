@@ -6,8 +6,8 @@ import React from "react";
 import { Link, Switch } from 'react-router-dom';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
+import Footer from './components/Footer';
+  
 
 export default class App extends Component {
 
@@ -32,10 +32,22 @@ export default class App extends Component {
             </Switch>
           </div>
 
+          
+    
+  
+     <Footer />
+  
 
         </div>
       </Router>
+     
+  
     );
+    
   }
 }
 
+
+
+
+  
