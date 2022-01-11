@@ -23,7 +23,7 @@ const Footer = () => {
          
           <Column>
             <Heading>Contact Us</Heading>
-            <FooterLink href="#">XX</FooterLink>
+            <FooterLink href="#">writeitmedia@gmail.com</FooterLink>
             <FooterLink href="#">XXX</FooterLink>
             <FooterLink href="#">XX</FooterLink>
             <FooterLink href="#">XXX</FooterLink>
