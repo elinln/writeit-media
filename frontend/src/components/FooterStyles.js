@@ -1,17 +1,15 @@
 import styled from 'styled-components';
    
 export const Box = styled.div`
-  padding: 20px 10px;
-  background: #FFDD8F;
-  position: fixed;
+  padding: 80px 60px;
+  background: black;
+  position: absolute;
   bottom: 0;
   width: 100%;
-  height: 200px;
-
-
+  
    
   @media (max-width: 1000px) {
-    
+    padding: 70px 30px;
   }
 `;
    
@@ -45,6 +43,7 @@ export const Row = styled.div`
    
 export const FooterLink = styled.a`
   color: #fff;
+  margin-bottom: 20px;
   font-size: 18px;
   text-decoration: none;
    
@@ -57,5 +56,6 @@ export const FooterLink = styled.a`
 export const Heading = styled.p`
   font-size: 24px;
   color: #fff;
+  margin-bottom: 40px;
   font-weight: bold;
 `;

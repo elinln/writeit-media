@@ -10,6 +10,7 @@ import React from "react";
 import { Link, Switch } from 'react-router-dom';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+<<<<<<< HEAD
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
@@ -17,6 +18,10 @@ import Logo from './assets/writeit.png';
 import Footer from './components/Footer';
 
 
+=======
+import Footer from './components/Footer';
+  
+>>>>>>> 1bf63a8e4ec39cf5dab5d125394c82d8fbbbf2c5
 
 export default class App extends Component {
 
@@ -78,11 +83,29 @@ export default class App extends Component {
         
         
 
+<<<<<<< HEAD
       </Router>
      
       <Footer />
       </div>
+=======
+          
+    
+  
+     <Footer />
+  
+
+        </div>
+      </Router>
+     
+  
+>>>>>>> 1bf63a8e4ec39cf5dab5d125394c82d8fbbbf2c5
     );
+    
   }
 }
 
+
+
+
+  

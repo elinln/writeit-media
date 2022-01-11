@@ -20,10 +20,16 @@ const Footer = () => {
             <FooterLink href="#">Clients & Partners</FooterLink>
             <FooterLink href="#">Terms & Conditions</FooterLink>
           </Column>
-         
+          <Column>
+            <Heading>Services</Heading>
+            <FooterLink href="#">Wev Development</FooterLink>
+            <FooterLink href="#">Marketing</FooterLink>
+            <FooterLink href="#">Google Ads</FooterLink>
+            <FooterLink href="#">SEO & SEM</FooterLink>
+          </Column>
           <Column>
             <Heading>Contact Us</Heading>
-            <FooterLink href="#">writeitmedia@gmail.com</FooterLink>
+            <FooterLink href="#">XX</FooterLink>
             <FooterLink href="#">XXX</FooterLink>
             <FooterLink href="#">XX</FooterLink>
             <FooterLink href="#">XXX</FooterLink>
