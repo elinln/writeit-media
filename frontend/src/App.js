@@ -14,12 +14,15 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Logo from './assets/writeit.png';
+import Footer from './components/Footer';
+
 
 
 export default class App extends Component {
 
   render() {
     return (
+      <div>
       <Router>
         <div>
           <div>
@@ -36,7 +39,7 @@ export default class App extends Component {
                   <Offcanvas.Header closeButton>
                     <Offcanvas.Title id="offcanvasNavbarLabel">write IT media</Offcanvas.Title>
                   </Offcanvas.Header>
-                  <Offcanvas.Body style={{ display: "flex", flexDirection: "column" }}>
+                  <Offcanvas.Body style={{ display: "flex", flexDirection: "column", }}>
                     <Link to={"/"} style={{ padding: "12px", textDecoration: "none", color: "black" }}>
                       Start
                     </Link>
@@ -70,8 +73,15 @@ export default class App extends Component {
               <Route exact path={"/references"} component={References} />
             </Switch>
           </div>
+         
         </div >
+        
+        
+
       </Router>
+     
+      <Footer />
+      </div>
     );
   }
 }
