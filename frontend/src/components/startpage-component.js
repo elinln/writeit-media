@@ -6,8 +6,8 @@ export default class Startpage extends Component {
 
     render() {
         return (
-            <div style={{ height: "800px", position: "absolute" }}>>
-            
+            <div style={{ margin: "2%" }}>
+
                 <h1 style={{ color: "#FFDD8F", marginLeft: "20%", padding: "5%", width: "50%" }}>
                     <b>
                         write <br></br>

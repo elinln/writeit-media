@@ -9,7 +9,9 @@ body {
   border-bottom-right-radius: 35px;
   border-bottom-left-radius: 35px;
   background: #FFDD8F;
-  color: white
+  color: white;
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%), 0 3px 7px 0 rgb(0 0 0 / 10%);
+
 }
 
 .aboutItem:active {
