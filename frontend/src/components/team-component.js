@@ -1,6 +1,6 @@
 import { Component } from "react/cjs/react.production.min";
 
-export default class References extends Component {
+export default class Team extends Component {
 
 
     render() {
@@ -8,8 +8,7 @@ export default class References extends Component {
             <div>
                 <h1 style={{ color: "#FFDD8F", marginLeft: "20%", padding: "5%", width: "50%" }}>
                     <b>
-                        Clients & <br></br>
-                        Partners
+                        Leadership Team
                     </b>
                 </h1>
             </div>
