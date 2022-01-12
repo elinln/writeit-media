@@ -1,5 +1,8 @@
-import { Component } from "react"
-import Bollar from "../assets/writeithej.png"
+import { Component } from "react";
+import Bollar from "../assets/writeithej.png";
+import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
+
 
 
 export default class Startpage extends Component {
@@ -8,7 +11,7 @@ export default class Startpage extends Component {
         return (
             <div style={{ margin: "2%" }}>
 
-                <h1 style={{ color: "#FFDD8F", marginLeft: "20%", padding: "5%", width: "50%" }}>
+                <h1 style={{ color: "#FFDD8F", marginLeft: "20%", padding: "3%", width: "50%" }}>
                     <b>
                         write <br></br>
                         IT <br></br>
@@ -17,6 +20,11 @@ export default class Startpage extends Component {
                 </h1>
                 <div style={{ display: "flex", justifyContent: "center" }}>
                     <img style={{ top: "0" }} alt="Hej" src={Bollar} ></img>
+                </div>
+                <div style={{ display: "flex", justifyContent: "center", marginTop: "5%" }}>
+                    <Link to={"/services"}>
+                        <Button style={{ border: "solid 2px #FFDD8F", color: "#FFDD8F", backgroundColor: "white" }} size="lg"><b>See our different packages</b></Button>
+                    </Link>
                 </div>
             </div>
         )

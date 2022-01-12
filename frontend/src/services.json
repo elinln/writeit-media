@@ -1,0 +1,22 @@
+{
+    "products": [
+        {
+            "title": "Website Small",
+            "description": "A website of your choice, pricing starts at 100€.",
+            "price": 100,
+            "id": 1
+        },
+        {
+            "title": "Website Medium",
+            "description": "A website of your choice, pricing starts at 300€.",
+            "price": 300,
+            "id": 2
+        },
+        {
+            "title": "Website Big",
+            "description": "A website of your choice, pricing starts at 500€.",
+            "price": 500,
+            "id": 3
+        }
+    ]
+}
