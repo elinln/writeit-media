@@ -2,9 +2,44 @@ import { Component } from "react/cjs/react.production.min";
 import Card from 'react-bootstrap/Card';
 import ProductsJson from '../services.json';
 import Button from 'react-bootstrap/Button';
-
+import { /* ToastContainer */ toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default class Products extends Component {
+    constructor(props) {
+        super(props)
+
+        this.saveProduct = this.saveProduct.bind(this)
+
+        this.state = {
+            cart: "",
+            item: []
+        }
+    }
+
+    saveProduct() {
+        this.notifySuccess()
+        const { item } = this.state;
+
+        localStorage.setItem('Cart', item)
+        console.log(this.item)
+
+
+    }
+
+    notifySuccess() {
+        toast.success('Added to cart!', {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+
+    }
+
     render() {
         return (
             <div>
@@ -32,14 +67,17 @@ export default class Products extends Component {
                                         {item.description}
                                     </Card.Text>
                                     <Card.Text>
-                                        {item.price}€
+                                        {item.price}kr
                                     </Card.Text>
-                                    <Button style={{ backgroundColor: "#FFDD8F", border: "solid 2px #FFDD8F" }}> <b>Add to cart</b></Button>
+                                    <Button onClick={this.saveProduct()} style={{ backgroundColor: "#FFDD8F", border: "solid 2px #FFDD8F" }}>
+                                        <b>Add to cart</b>
+                                    </Button>
                                 </Card.Body>
                             </Card>
                         </div>
                     ))}
                 </div>
+                {/* <ToastContainer></ToastContainer> */}
             </div >
 
         )
