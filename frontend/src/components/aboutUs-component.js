@@ -3,7 +3,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import '../App.css';
 
 
-export default class AboutUs extends Component {
+export default class FAQ extends Component {
 
 
     render() {

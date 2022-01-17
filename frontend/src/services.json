@@ -2,20 +2,20 @@
     "products": [
         {
             "title": "Website Small",
-            "description": "A website of your choice, pricing starts at 100€.",
-            "price": 100,
+            "description": "A website of your choice, pricing starts at 1000kr.",
+            "price": 1000,
             "id": 1
         },
         {
             "title": "Website Medium",
-            "description": "A website of your choice, pricing starts at 300€.",
-            "price": 300,
+            "description": "A website of your choice, pricing starts at 3000kr.",
+            "price": 3000,
             "id": 2
         },
         {
-            "title": "Website Big",
-            "description": "A website of your choice, pricing starts at 500€.",
-            "price": 500,
+            "title": "Website Large",
+            "description": "A website of your choice, pricing starts at 5000kr.",
+            "price": 5000,
             "id": 3
         }
     ]
