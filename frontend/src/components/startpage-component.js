@@ -2,6 +2,7 @@ import { Component } from "react";
 import Bollar from "../assets/writeithej.png";
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
+import "/Users/elinnilsson/Desktop/writeitmedia/frontend/src/App.css"
 
 
 
@@ -24,6 +25,16 @@ export default class Startpage extends Component {
                 <div style={{ display: "flex", justifyContent: "center", marginTop: "5%" }}>
                     <Link to={"/services"}>
                         <Button style={{ border: "solid 2px #FFDD8F", color: "#FFDD8F", backgroundColor: "white" }} size="lg"><b>See our different packages</b></Button>
+                    </Link>
+                </div>
+                <div className="startImage">
+                </div>
+                <div style={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", marginTop: "5%", color: "#FFDD8F" }}>
+                    <h1 style={{ fontSize: "8em" }}> Our mission</h1>
+                    <h4>We want you to enjoy your website-experience as much as we do, no matter how small or big your business is.</h4>
+                    <h4>Our goal is to make our clients happy, as your wish is our command.</h4>
+                    <Link to={"/FAQ"}>
+                        <Button style={{ fontSize: "17px", marginTop: "10%", border: "solid 2px #FFDD8F", color: "white", backgroundColor: "#FFDD8F" }} size="lg"><b>Read more about us and find out more about how it works</b></Button>
                     </Link>
                 </div>
             </div>

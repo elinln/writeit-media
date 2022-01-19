@@ -30,7 +30,7 @@ export default class App extends Component {
               <Navbar className="appHeader" responsive="true" expand={false} >
                 <Container fluid>
                   <div></div>
-                  <Navbar.Brand style={{ color: "white", display: "flex", justifyContent: "center" }} href="/"> <img style={{ height: "100px", width: "auto", margin: "0" }} alt="Logga" src={Logo} ></img></Navbar.Brand>
+                  <Navbar.Brand style={{ display: "flex", justifyContent: "center" }} href="/"> <img style={{ height: "4em", width: "auto", margin: "0" }} alt="Logga" src={Logo} ></img></Navbar.Brand>
                   <Navbar.Toggle aria-controls="offcanvasNavbar" />
                   <Navbar.Offcanvas
                     id="offcanvasNavbar"

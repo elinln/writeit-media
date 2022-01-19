@@ -21,3 +21,15 @@ body {
 .aboutItem {
   color: "#FFDD8F";
 }
+
+.startImage {
+  background-image: url("./assets/unsplash2.jpg");
+  height: 25em;
+  background-repeat: no-repeat;
+  color: #FFDD8F;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  margin: 10%;
+  align-items: center;
+}
