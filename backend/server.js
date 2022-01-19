@@ -24,7 +24,7 @@ app.get("/api/admin/purchases", async (req, res) => {
 
 app.post("/api/session/new", async (req, res) => {
     let products = req.body.products;
-    let perfumesToStripe = [];
+    let servicesToStripe = [];
 
     products.forEach((product) => {
         let line_item = {
@@ -38,12 +38,12 @@ app.post("/api/session/new", async (req, res) => {
             },
             quantity: product.quantity || 1,
         }
-        perfumesToStripe.push(line_item);
+        servicesToStripe.push(line_item);
     })
 
     const session = await stripe.checkout.sessions.create({
         payment_method_types: ["card"],
-        line_items: perfumesToStripe,
+        line_items: servicesToStripe,
         mode: "payment",
         success_url: "http://localhost:3000/success_checkout.html",
         cancel_url: "http://localhost:3000/canceled_checkout.html"

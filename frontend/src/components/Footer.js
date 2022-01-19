@@ -7,26 +7,24 @@ import {
   FooterLink,
   Heading,
 } from "./FooterStyles";
-  
+
 const Footer = () => {
   return (
     <Box>
       <Container>
-        <Row>
+        <Row style={{ display: "flex", justifyContent: "center" }}>
           <Column>
             <Heading>About Us</Heading>
-            <FooterLink href="#">Our story</FooterLink>
-            <FooterLink href="#">Leadership Team</FooterLink>
-            <FooterLink href="#">Clients & Partners</FooterLink>
+            <FooterLink href="/FAQ">FAQ</FooterLink>
+            <FooterLink href="/team">Leadership Team</FooterLink>
+            <FooterLink href="/references">Clients & Partners</FooterLink>
             <FooterLink href="#">Terms & Conditions</FooterLink>
           </Column>
-         
           <Column>
             <Heading>Contact Us</Heading>
             <FooterLink href="#">writeitmedia@gmail.com</FooterLink>
-            <FooterLink href="#">XXX</FooterLink>
-            <FooterLink href="#">XX</FooterLink>
-            <FooterLink href="#">XXX</FooterLink>
+            <FooterLink> 0738-405840</FooterLink>
+            <FooterLink>Aschebergsgatan 9</FooterLink>
           </Column>
           <Column>
             <Heading>Social Media</Heading>
@@ -37,7 +35,7 @@ const Footer = () => {
                 </span>
               </i>
             </FooterLink>
-            <FooterLink href="#">
+            <FooterLink href="https://www.instagram.com/writeitmedia/">
               <i className="fab fa-instagram">
                 <span style={{ marginLeft: "10px" }}>
                   Instagram
@@ -47,20 +45,17 @@ const Footer = () => {
             <FooterLink href="#">
               <i className="fab fa-twitter">
                 <span style={{ marginLeft: "10px" }}>
-                  Twitter
-                </span>
-              </i>
-            </FooterLink>
-            <FooterLink href="#">
-              <i className="fab fa-youtube">
-                <span style={{ marginLeft: "10px" }}>
-                  Youtube
+                  LinkedIn
                 </span>
               </i>
             </FooterLink>
           </Column>
         </Row>
       </Container>
+      <div style={{ color: "white", fontSize: "12px", display: "flex", flexDirection: "column", alignItems: "center", marginTop: "7%" }}>
+        <p>Org-number: 969796-5417</p>
+        <p>© 2022 - ALL RIGHTS RESERVED. DESIGN BY WRITE IT MEDIA </p>
+      </div>
     </Box>
   );
 };

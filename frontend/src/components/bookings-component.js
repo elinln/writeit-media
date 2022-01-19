@@ -9,7 +9,7 @@ export default class Products extends Component {
     constructor(props) {
         super(props)
 
-        this.saveProduct = this.saveProduct.bind(this)
+        this.saveProduct = this.saveProduct.bind(this);
 
         this.state = {
             cart: "",
@@ -23,8 +23,6 @@ export default class Products extends Component {
 
         localStorage.setItem('Cart', item)
         console.log(this.item)
-
-
     }
 
     notifySuccess() {
@@ -55,10 +53,10 @@ export default class Products extends Component {
                         </b>
                     </h2>
                 </div>
-                <div style={{ display: "flex", justifyContent: "center", flexDirection: "row" }}>
+                <div style={{ display: "flex", justifyContent: "center", flexDirection: "row", flexWrap: "wrap" }}>
                     {ProductsJson.products.map((item, i) => (
-                        <div key={item.id} style={{ display: "flex", justifyContent: "center", flexDirection: "row", margin: "2%" }}>
-                            <Card style={{ width: '18rem', margin: "2%", border: "solid 2px #FFDD8F" }}>
+                        <div key={item.id} style={{ backgroundColor: "#FFDD8F", display: "flex", justifyContent: "center", flexDirection: "row", alignItems: "center", width: "75%" }}>
+                            <Card style={{ margin: "1%", width: "50%", border: "solid 2px #FFDD8F", flexDirection: "column", display: "flex" }}>
                                 <Card.Body>
                                     <Card.Title>
                                         {item.title}
@@ -69,9 +67,11 @@ export default class Products extends Component {
                                     <Card.Text>
                                         {item.price}kr
                                     </Card.Text>
-                                    <Button onClick={this.saveProduct()} style={{ backgroundColor: "#FFDD8F", border: "solid 2px #FFDD8F" }}>
-                                        <b>Add to cart</b>
-                                    </Button>
+                                    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
+                                        <Button onClick={this.saveProduct()} style={{ backgroundColor: "#FFDD8F", border: "solid 2px #FFDD8F", width: "80%" }}>
+                                            <b>Add to cart</b>
+                                        </Button>
+                                    </div>
                                 </Card.Body>
                             </Card>
                         </div>
