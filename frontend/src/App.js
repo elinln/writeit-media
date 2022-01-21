@@ -16,6 +16,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Logo from './assets/writeit.png';
 import Footer from './components/Footer';
+import TermsConditions from './components/termsConditions-component';
+import PrivacyPolicy from './components/privacyPolicy-component';
 
 
 
@@ -62,6 +64,12 @@ export default class App extends Component {
                       <Link to={"/team"} style={{ padding: "12px", textDecoration: "none", color: "black" }}>
                         Leadership Team
                       </Link>
+                      <Link to={"/conditions"} style={{ padding: "12px", textDecoration: "none", color: "black" }}>
+                        Leadership Team
+                      </Link>
+                      <Link to={"/privacypolicy"} style={{ padding: "12px", textDecoration: "none", color: "black" }}>
+                        Privacy Policy
+                      </Link>
                     </Offcanvas.Body>
                   </Navbar.Offcanvas>
                 </Container>
@@ -76,6 +84,8 @@ export default class App extends Component {
                 <Route exact path={"/services"} component={Products} />
                 <Route exact path={"/references"} component={References} />
                 <Route exact path={"/team"} component={Team} />
+                <Route exact path={"/conditions"} component={TermsConditions} />
+                <Route exact path={"/privacypolicy"} component={PrivacyPolicy} />
               </Switch>
             </div>
 
