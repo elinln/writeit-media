@@ -2,7 +2,7 @@
     "name": "writeit-media",
     "version": "0.1.0",
     "engines": {
-        "node": "14.x"
+        "node": "v14.15.1"
       },
     "private": true,
     "dependencies": {
