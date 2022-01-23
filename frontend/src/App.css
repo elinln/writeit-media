@@ -28,8 +28,10 @@ body {
   background-repeat: no-repeat;
   color: #FFDD8F;
   background-position: center;
+  background-size: contain;
   display: flex;
   justify-content: center;
   margin: 10%;
   align-items: center;
+  max-width: 100%;
 }

@@ -16,6 +16,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Logo from '../assets/writeit.png';
 import data from '../data';
+import TermsConditions from '../components/termsConditions-component';
+import PrivacyPolicy from '../components/privacyPolicy-component';
 
 
 const Header = () => {
@@ -91,6 +93,12 @@ const Header = () => {
                                         <Link to={"/team"} style={{ padding: "12px", textDecoration: "none", color: "black" }}>
                                             Leadership Team
                                         </Link>
+                                        <Link to={"/conditions"} style={{ padding: "12px", textDecoration: "none", color: "black" }}>
+                                            Terms & Conditions
+                                        </Link>
+                                        <Link to={"/privacypolicy"} style={{ padding: "12px", textDecoration: "none", color: "black" }}>
+                                            Privacy Policy
+                                        </Link>
                                     </Offcanvas.Body>
                                 </Navbar.Offcanvas>
                             </Container>
@@ -105,6 +113,8 @@ const Header = () => {
                             <Route path={"/services"} children={<Products products={products} onAdd={onAdd} />} />
                             <Route exact path={"/references"} component={References} />
                             <Route exact path={"/team"} component={Team} />
+                            <Route exact path={"/conditions"} component={TermsConditions} />
+                            <Route exact path={"/privacypolicy"} component={PrivacyPolicy} />
                         </Switch>
                     </div>
                 </div >
