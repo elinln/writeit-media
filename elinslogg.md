@@ -39,3 +39,13 @@ Fortsättning med att skriva content på bland annat FAQ och Clients & Partners.
 
 19/1 -
 Utvecklar tjänsterna och fortsätter med kundvagnen. Möte med min LIA-plats på eftermiddagen för att skriva under handlingsplanen. Efter mötet med LIA så fortsatte jag med att läsa på om kopplingen mellan Stripe och localstorage för att få rätt produkter kopplade till backend-delen. La även till mer content och design på startsidan.
+
+21/1 - 
+Funderade på hur många tjänster man ska kunna lägga till. Rimligtvis är det bara 1 (rätt självklart) men då får jag sitta och strukturera om i koden. Tror det är mer värt att bara kunna köpa en tjänst, det är med rimligt än att kunna lägga till flera olika paket. 
+
+22/1 -
+Blev klar med kundvagnssidan, ska fortsätta med checkouten till Stripe nu. 
+
+23/1 -
+Söndag idag så jag skapade bara Lets Encrypt SSL certifikat och pushade upp mina ändringar så de kommer upp på den hostade sidan. 
+
