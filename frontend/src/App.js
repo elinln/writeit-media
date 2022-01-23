@@ -5,8 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/Footer';
 import Header from './header/Header.js';
 
-
-
 function App() {
 
   return (
@@ -17,8 +15,6 @@ function App() {
           <Footer />
         </div>
       </Router>
-      <div>
-      </div>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { Component } from "react";
 import Bollar from "../assets/writeithej.png";
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
-import "/Users/elinnilsson/Desktop/writeitmedia/frontend/src/App.css"
+import "/Users/linnalessandra/writeit-medianew/frontend/src/App.css";
 
 
 
