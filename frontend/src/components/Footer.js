@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <Box>
       <Container>
-        <Row style={{ display: "flex", justifyContent: "center" }}>
+        <Row style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
           <Column>
             <Heading>About Us</Heading>
             <FooterLink href="/FAQ">FAQ</FooterLink>

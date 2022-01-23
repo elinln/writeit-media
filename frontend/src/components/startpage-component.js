@@ -19,7 +19,7 @@ export default class Startpage extends Component {
                         media
                     </b>
                 </h1>
-                <div style={{ display: "flex", justifyContent: "center" }}>
+                <div style={{ display: "flex", justifyContent: "center", flexFlow: "column" }}>
                     <img style={{ top: "0" }} alt="Hej" src={Bollar} ></img>
                 </div>
                 <div style={{ display: "flex", justifyContent: "center", marginTop: "5%" }}>
@@ -34,7 +34,7 @@ export default class Startpage extends Component {
                     <h4>We want you to enjoy your website-experience as much as we do, no matter how small or big your business is.</h4>
                     <h4>Our goal is to make our clients happy, as your wish is our command.</h4>
                     <Link to={"/FAQ"}>
-                        <Button style={{ fontSize: "17px", marginTop: "10%", border: "solid 2px #FFDD8F", color: "white", backgroundColor: "#FFDD8F" }} size="lg"><b>Read more about us and find out more about how it works</b></Button>
+                        <Button style={{ fontSize: "17px", marginTop: "10%", border: "solid 2px #FFDD8F", color: "white", backgroundColor: "#FFDD8F" }} size="lg"><b>Read more about us and find out about how it works</b></Button>
                     </Link>
                 </div>
             </div>

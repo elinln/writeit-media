@@ -1,62 +1,59 @@
-import {
-    Elements,
-    PaymentElement
-} from '@stripe/react-stripe-js'
-import { useState } from 'react'
-import { useStripe, useElements } from '@stripe/react-stripe-js';
+import React from 'react';
+import Button from 'react-bootstrap/Button';
 
-export default function Cart() {
-    const stripe = useStripe();
-    const elements = useElements();
-    const [message, setMessage] = useState(null);
-    const [isLoading, setIsLoading] = useState(false);
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        if (!stripe || !elements) {
-            // Stripe.js has not yet loaded.
-            // Make sure to disable form submission until Stripe.js has loaded.
-            return;
-        }
-
-        setIsLoading(true);
-
-        const { error } = await stripe.confirmPayment({
-            elements,
-            confirmParams: {
-                // Make sure to change this to your payment completion page
-                return_url: "http://localhost:3000",
-            },
-        });
-
-        // This point will only be reached if there is an immediate error when
-        // confirming the payment. Otherwise, your customer will be redirected to
-        // your `return_url`. For some payment methods like iDEAL, your customer will
-        // be redirected to an intermediate site first to authorize the payment, then
-        // redirected to the `return_url`.
-        if (error.type === "card_error" || error.type === "validation_error") {
-            setMessage(error.message);
-        } else {
-            setMessage("An unexpected error occured.");
-        }
-
-        setIsLoading(false);
-    }
-
+export default function Cart(props) {
+    const { cartItems, onAdd, onRemove } = props;
+    const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
     return (
-        <Elements>
+        <aside >
+            <h1 style={{ color: "#FFDD8F", marginLeft: "20%", padding: "3%", width: "50%" }}>Cart </h1>
+            <div>
+                {cartItems.length === 0 && <div style={{ color: "#FFDD8F", marginLeft: "20%", padding: "3%", width: "50%" }}> <h3>Cart is empty</h3></div>}
+                {cartItems.map((item) => (
+                    <div style={{ marginTop: "2%", borderRadius: "20px", color: "white", backgroundColor: "#FFDD8F", marginLeft: "20%", padding: "3%", width: "50%" }} key={item.id}>
+                        <div style={{ display: "flex", justifyContent: "space-between" }}>
+                            <div> <strong>{item.title}</strong></div>
+                            <div>
+                                <Button variant="light" onClick={() => onRemove(item)} >
+                                    -
+                                </Button>{' '}
+                                <Button variant="light" onClick={() => onAdd(item)} >
+                                    +
+                                </Button>
+                            </div>
 
-            <form id="payment-form" onSubmit={handleSubmit}>
-                <PaymentElement id="payment-element" />
-                <button disabled={isLoading || !stripe || !elements} id="submit">
-                    <span id="button-text">
-                        {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
-                    </span>
-                </button>
-                {/* Show any error or success messages */}
-                {message && <div id="payment-message">{message}</div>}
-            </form>
-        </Elements>
-    )
+                        </div>
+                        <div>
+                            <strong>
+                                {item.qty} x {item.price.toFixed(2)}kr
+                            </strong>
+                        </div>
+                        <div style={{ padding: "2%" }}>
+                            {item.description}
+                        </div>
+                    </div>
+                ))}
+
+                {cartItems.length !== 0 && (
+                    <>
+                        <hr></hr>
+                        <div style={{ marginLeft: "20%", padding: "3%", width: "50%" }}>
+                            <div>
+                                <strong>Total Price</strong>
+                            </div>
+                            <div>
+                                <strong>{itemsPrice.toFixed(2)}kr</strong>
+                            </div>
+                        </div>
+                        <hr />
+                        <div style={{ marginLeft: "20%", padding: "3%", width: "50%" }}>
+                            <Button onClick={() => alert('Implement Checkout!')}>
+                                Checkout
+                            </Button>
+                        </div>
+                    </>
+                )}
+            </div>
+        </aside>
+    );
 }
