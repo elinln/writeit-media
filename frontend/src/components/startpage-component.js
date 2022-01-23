@@ -2,7 +2,7 @@ import { Component } from "react";
 import Bollar from "../assets/writeithej.png";
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
-import "/Users/linnalessandra/writeit-medianew/frontend/src/App.css";
+import "../App.css";
 
 
 
@@ -20,7 +20,7 @@ export default class Startpage extends Component {
                     </b>
                 </h1>
                 <div style={{ display: "flex", justifyContent: "center", flexFlow: "column" }}>
-                    <img style={{ top: "0" }} alt="Hej" src={Bollar} ></img>
+                    <img style={{ top: "0", maxWidth: "100%" }} alt="info-flow" src={Bollar} ></img>
                 </div>
                 <div style={{ display: "flex", justifyContent: "center", marginTop: "5%" }}>
                     <Link to={"/services"}>
@@ -30,7 +30,7 @@ export default class Startpage extends Component {
                 <div className="startImage">
                 </div>
                 <div style={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", marginTop: "5%", color: "#FFDD8F" }}>
-                    <h1 style={{ fontSize: "8em" }}> Our mission</h1>
+                    <h1 style={{ fontSize: "7em", maxWidth: "100%" }}> Our mission</h1>
                     <h4>We want you to enjoy your website-experience as much as we do, no matter how small or big your business is.</h4>
                     <h4>Our goal is to make our clients happy, as your wish is our command.</h4>
                     <Link to={"/FAQ"}>
