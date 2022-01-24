@@ -56,17 +56,11 @@ const Header = () => {
                     <div>
                         <Navbar className="appHeader" responsive="true" expand={false} >
                             <Container fluid>
-                                <div>
-                                    <Link to="/cart" style={{ color: "white" }}>
-                                        <li className="fas fa-shopping-cart"></li>
-                                    </Link>
-                                </div>
-                                <Navbar.Brand style={{ display: "flex", justifyContent: "center", padding: "0", margin: "0" }} href="/"> <img style={{ height: "4em", width: "auto", margin: "0" }} alt="Logga" src={Logo} ></img></Navbar.Brand>
                                 <Navbar.Toggle aria-controls="offcanvasNavbar" />
                                 <Navbar.Offcanvas
                                     id="offcanvasNavbar"
                                     aria-labelledby="offcanvasNavbarLabel"
-                                    placement="end"
+                                    placement="start"
                                 >
                                     <Offcanvas.Header closeButton>
                                         <Offcanvas.Title id="offcanvasNavbarLabel">write IT media</Offcanvas.Title>
@@ -101,6 +95,12 @@ const Header = () => {
                                         </Link>
                                     </Offcanvas.Body>
                                 </Navbar.Offcanvas>
+                                <Navbar.Brand style={{ display: "flex", justifyContent: "center", padding: "0", margin: "0" }} href="/"> <img style={{ height: "4em", width: "auto", margin: "0" }} alt="Logga" src={Logo} ></img></Navbar.Brand>
+                                <div>
+                                    <Link to="/cart" style={{ color: "white" }}>
+                                        <li style={{ fontSize: "25px" }} className="fas fa-shopping-cart"></li>
+                                    </Link>
+                                </div>
                             </Container>
                         </Navbar>
                     </div>

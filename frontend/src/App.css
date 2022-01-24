@@ -5,6 +5,11 @@ body {
     height: 100%;
 }
 
+body #magicMouseCursor {
+    border: 5px double #ffdd8f9f;
+
+}
+
 .appHeader {
   border-bottom-right-radius: 35px;
   border-bottom-left-radius: 35px;
@@ -34,4 +39,14 @@ body {
   margin: 10%;
   align-items: center;
   max-width: 100%;
+}
+
+.ourMission {
+  font-size: 7em;
+}
+
+@media screen and (max-width: 600px) {
+  .ourMission {
+    font-size: 6em;
+  }
 }
