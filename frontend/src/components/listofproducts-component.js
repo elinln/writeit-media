@@ -1,6 +1,3 @@
-/* import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom'; */
 import React from "react";
 import Product from './oneProduct-component';
 
@@ -21,6 +18,11 @@ export default function Products(props) {
                         Choose wich package that suits you best and we will be in touch with you as soon as possible.
                     </b>
                 </h2>
+                <p>
+                    <b>
+                        All packages include consultation before start.
+                    </b>
+                </p>
             </div>
             <div>
                 {products.map((product) => (
