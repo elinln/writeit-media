@@ -1,6 +1,6 @@
 {
   "name": "writeitmedia",
-  "homepage": "https://writeitmedia.se",
+  "homepage": "https://writeit-media.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
