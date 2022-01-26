@@ -9,6 +9,7 @@ import ContactUs from '../components/contactPage-component';
 import Cart from '../components/cart-component';
 import Products from '../components/listofproducts-component';
 import Team from '../components/team-component';
+import SignUp from '../components/signup-component';
 import References from '../components/reference-component';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Offcanvas from 'react-bootstrap/Offcanvas';
@@ -16,6 +17,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Logo from '../assets/writeit.png';
 import data from '../data';
+import Complete from '../components/complete-signup';
+import VerifyOrder from '../components/verifyOrder-component';
 import TermsConditions from '../components/termsConditions-component';
 import PrivacyPolicy from '../components/privacyPolicy-component';
 
@@ -81,6 +84,9 @@ const Header = () => {
                                         <Link to={"/services"} style={{ padding: "12px", textDecoration: "none", color: "black" }}>
                                             Our services
                                         </Link>
+                                        <Link to={"/signUp"} style={{ padding: "12px", textDecoration: "none", color: "black" }}>
+                                            Sign up
+                                        </Link>
                                         <Link to={"/references"} style={{ padding: "12px", textDecoration: "none", color: "black" }}>
                                             Clients & Partners
                                         </Link>
@@ -115,6 +121,9 @@ const Header = () => {
                             <Route exact path={"/team"} component={Team} />
                             <Route exact path={"/conditions"} component={TermsConditions} />
                             <Route exact path={"/privacypolicy"} component={PrivacyPolicy} />
+                            <Route exact path={"/signUp"} component={SignUp} />
+                            <Route exact path={"/complete-signUp"} component={Complete} />
+                            <Route exact path={"/verifyOrder"} component={VerifyOrder} />
                         </Switch>
                     </div>
                 </div >
