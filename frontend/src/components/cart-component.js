@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-/* import { useStripe } from '@stripe/react-stripe-js'
- */import StripeContainer from './stripePayment.js';
+import StripeContainer from './stripePayment.js';
 import { useState } from 'react';
 
 
@@ -11,6 +10,11 @@ export default function Cart(props) {
     const { cartItems, onAdd, onRemove } = props;
     const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
     const [showItem, setShowItem] = useState(false);
+
+    const saveCart = () => {
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        console.log(cartItems)
+    }
 
 
     return (
@@ -60,7 +64,7 @@ export default function Cart(props) {
                                 </div>
                                 <hr />
                                 <div style={{ marginLeft: "20%", padding: "3%", width: "50%" }}>
-                                    <Button onClick={() => setShowItem(true)}>
+                                    <Button onClick={() => { setShowItem(true); saveCart() }} type="submit">
                                         Checkout
                                     </Button>
                                 </div>
