@@ -27,7 +27,7 @@ export default class TermsConditions extends Component {
 
                             <h5>Confidentialy</h5 ><br></br >
                             Our relationship, as well as all information (documented or verbal)
-                            that you share with Write IT Media as part of your consulation, will
+                            that you share, with Write IT Media as part of your consulation, will
                             be bound by the principles of confidentiality.
                             Write IT Media will not disclose any information pertaining to you without your written consent.<br></br >
 
