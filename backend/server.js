@@ -3,8 +3,6 @@ const app = express()
 require("dotenv").config()
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 const secretKey = process.env.STRIPE_SECRET_KEY;
-const port = process.env.PORT || 3000;
-
 const bodyParser = require("body-parser")
 const cors = require("cors")
 
