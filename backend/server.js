@@ -63,7 +63,7 @@ app.use('/tutorials', workoutRouter);
 app.use('/users', usersRouter);
 
 const uri = process.env.ATLAS_URI;
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 const connection = mongoose.connection;
 connection.once('open', () => {
     console.log("MongoDB database connection ok");
