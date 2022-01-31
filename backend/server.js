@@ -6,6 +6,8 @@ const secretKey = process.env.STRIPE_SECRET_KEY;
 const bodyParser = require("body-parser")
 const cors = require("cors")
 const port = process.env.PORT || 3000
+import cors from 'cors';
+require('dotenv').config()
 const whitelist = ["http://localhost:3000"]
 const corsOptions = {
   origin: function (origin, callback) {
@@ -57,6 +59,7 @@ app.post("/payment", cors(), async (req, res) => {
 const mongoose = require('mongoose')
 require('dotenv').config();
 
+app.use(cors());
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
