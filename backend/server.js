@@ -6,6 +6,7 @@ const secretKey = process.env.STRIPE_SECRET_KEY;
 const bodyParser = require("body-parser")
 const cors = require("cors")
 const port = process.env.PORT || 3000
+
 /*const whitelist = ["http://localhost:3000"]
 /*const corsOptions = {
   origin: function (origin, callback) {
