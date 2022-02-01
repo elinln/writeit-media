@@ -12,8 +12,22 @@ app.use(cors());
 
 app.options('*', cors())
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "https://localhost:3001"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+app.get('/', function(req, res, next) {
+  // Handle the get for this route
+});
+
+app.post('/', function(req, res, next) {
+ // Handle the post for this route
+});
+
 app.use((req,res, next)=>{
-    res.setHeader('Acess-Control-Allow-origin',"http://localhost:3000");
+    res.setHeader('Acess-Control-Allow-origin',"http://localhost:3001");
     res.setHeader('Access-Control-Allow-Headers',"*");
     res.header('Access-Control-Allow-Credentials', true);
     next();
