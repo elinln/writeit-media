@@ -7,29 +7,7 @@ const bodyParser = require("body-parser")
 const port = process.env.PORT || 3000
 const cors = require('cors');
 
-app.use(cors());
-/*app.options('*', cors())*/
-
-
-/*app.options('*', cors())*/
-
-/*app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-  });*/
-
-  
-  
-
-
-
-/*app.use((req,res, next)=>{
-    res.setHeader('Acess-Control-Allow-origin',"http://localhost:3001");
-    res.setHeader('Access-Control-Allow-Headers',"*");
-    res.header('Access-Control-Allow-Credentials', true);
-    next();
-});*/
+/*app.use(cors());*/
 
 
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -70,6 +48,7 @@ require('dotenv').config();
 
 
 app.use(express.json());
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const PORT = process.env.PORT || 3000;
