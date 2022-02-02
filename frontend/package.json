@@ -3,7 +3,7 @@
   "homepage": "https://writeit-media.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3000",
+  /*"proxy": "http://localhost:3000",*/
   "dependencies": {
     "@stripe/react-stripe-js": "^1.7.0",
     "@stripe/stripe-js": "^1.22.0",
