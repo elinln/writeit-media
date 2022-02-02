@@ -4,8 +4,8 @@ require("dotenv").config()
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 const secretKey = process.env.STRIPE_SECRET_KEY;
 const bodyParser = require("body-parser")
+const port = process.env.PORT || 3000
 const cors = require("cors")
-/*const port = process.env.PORT || 3000*/
 app.use(cors());
 
 
@@ -77,3 +77,5 @@ app.post('/create-checkout-session', async (req, res) => {
             console.error("wrooooonggg:", error)
         })
 })
+
+
