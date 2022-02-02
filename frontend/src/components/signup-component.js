@@ -76,7 +76,7 @@ export default class SignUp extends Component {
             signedIn: true
         }
 
-        axios.post("http://localhost:3000/users/add", user)
+        axios.post("/users/add", user)
             .then(response => {
                 console.log(response.data);
                 localStorage.setItem('username', user.username);
@@ -112,41 +112,44 @@ export default class SignUp extends Component {
 
     render() {
         return (
-            <Card style={{ width: "40%", height: "auto", marginTop: "7%" }}>
-                <form className="form-control" style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
-                    <Card.Title >
-                        <h1 style={{ color: "#FFDD8F", marginTop: "8%" }}> Sign up to make a purchase </h1>
-                    </Card.Title>
-                    <Card.Body style={{ width: "50%" }}>
-                        <Card.Text as="div">
-                            <label style={{ display: "flex", flexDirection: "column", width: "100%" }}>
-                                Name: <input
-                                    type="text"
-                                    className="form-control"
-                                    id="name"
-                                    required
-                                    value={this.state.username}
-                                    onChange={this.onChangeUsername}
-                                    placeholder="Type in your name..."
-                                />
-                                <label>
-                                    Email: <input
-                                        type="email"
+            <div style={{ display: "flex", justifyContent: "center" }}>
+                <Card style={{ width: "40%", height: "auto", marginTop: "7%" }}>
+                    <form className="form-control" style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
+                        <Card.Title >
+                            <h1 style={{ color: "#FFDD8F", marginTop: "8%" }}> Sign up to make a purchase </h1>
+                        </Card.Title>
+                        <Card.Body style={{ width: "50%" }}>
+                            <Card.Text as="div">
+                                <label style={{ display: "flex", flexDirection: "column", width: "100%" }}>
+                                    Name: <input
+                                        type="text"
                                         className="form-control"
-                                        value={this.state.email}
-                                        onChange={this.onChangeEmail}
-                                        placeholder="Type in your E-mail..."
-                                    ></input>
+                                        id="name"
+                                        required
+                                        value={this.state.username}
+                                        onChange={this.onChangeUsername}
+                                        placeholder="Type in your name..."
+                                    />
+                                    <label>
+                                        Email: <input
+                                            type="email"
+                                            className="form-control"
+                                            value={this.state.email}
+                                            onChange={this.onChangeEmail}
+                                            placeholder="Type in your E-mail..."
+                                        ></input>
+                                    </label>
+                                    <button className="btn btn-success" style={{ marginTop: '2rem', width: '6rem' }} type="submit" value="Create User" onClick={this.onSubmit}>
+                                        Done
+                                    </button>
                                 </label>
-                                <button className="btn btn-success" style={{ marginTop: '2rem', width: '6rem' }} type="submit" value="Create User" onClick={this.onSubmit}>
-                                    Done
-                                </button>
-                            </label>
-                            <ToastContainer />
-                        </Card.Text>
-                    </Card.Body>
-                </form>
-            </Card>
+                                <ToastContainer />
+                            </Card.Text>
+                        </Card.Body>
+                    </form>
+                </Card>
+            </div>
+
         );
     }
 }

@@ -15,12 +15,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
-import Logo from '../assets/writeit.png';
+import Logo from '../assets/damn.png';
 import data from '../data';
 import Complete from '../components/complete-signup';
-import VerifyOrder from '../components/verifyOrder-component';
 import TermsConditions from '../components/termsConditions-component';
 import PrivacyPolicy from '../components/privacyPolicy-component';
+import Success from '../verification/success-component';
+import Cancelled from '../verification/cancelled-component';
 
 
 const Header = () => {
@@ -101,7 +102,7 @@ const Header = () => {
                                         </Link>
                                     </Offcanvas.Body>
                                 </Navbar.Offcanvas>
-                                <Navbar.Brand style={{ display: "flex", justifyContent: "center", padding: "0", margin: "0" }} href="/"> <img style={{ height: "4em", width: "auto", margin: "0" }} alt="Logga" src={Logo} ></img></Navbar.Brand>
+                                <Navbar.Brand href="/"> <img style={{ height: "2em", width: "auto", margin: "0" }} alt="Logga" src={Logo} ></img></Navbar.Brand>
                                 <div>
                                     <Link to="/cart" style={{ color: "white" }}>
                                         <li style={{ fontSize: "25px" }} className="fas fa-shopping-cart"></li>
@@ -112,10 +113,10 @@ const Header = () => {
                     </div>
                     <div>
                         <Switch>
+                            <Route exact path="/cart" children={<Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />} />
                             <Route exact path="/FAQ" component={FAQ} />
                             <Route exact path={"/"} component={Startpage} />
                             <Route exact path={"/contactUs"} component={ContactUs} />
-                            <Route path={"/cart"} children={<Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />} />
                             <Route path={"/services"} children={<Products products={products} onAdd={onAdd} />} />
                             <Route exact path={"/references"} component={References} />
                             <Route exact path={"/team"} component={Team} />
@@ -123,7 +124,8 @@ const Header = () => {
                             <Route exact path={"/privacypolicy"} component={PrivacyPolicy} />
                             <Route exact path={"/signUp"} component={SignUp} />
                             <Route exact path={"/complete-signUp"} component={Complete} />
-                            <Route exact path={"/verifyOrder"} component={VerifyOrder} />
+                            <Route exact path={"/cancelledOrder"} component={Cancelled} />
+                            <Route exact path={"/successfullOrder"} component={Success} />
                         </Switch>
                     </div>
                 </div >

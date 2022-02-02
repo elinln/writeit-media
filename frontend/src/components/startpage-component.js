@@ -11,7 +11,6 @@ export default class Startpage extends Component {
     render() {
         return (
             <div style={{ margin: "2%" }}>
-
                 <h1 style={{ color: "#FFDD8F", marginLeft: "20%", padding: "3%", width: "50%" }}>
                     <b>
                         write <br></br>

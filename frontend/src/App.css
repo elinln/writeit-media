@@ -6,13 +6,13 @@ body {
 }
 
 body #magicMouseCursor {
-    border: 5px double #ffdd8f9f;
+    border: 5px double #ffdd8f7c;
 
 }
 
 .appHeader {
-  border-bottom-right-radius: 35px;
-  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
   background: #FFDD8F;
   color: white;
   box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%), 0 3px 7px 0 rgb(0 0 0 / 10%);

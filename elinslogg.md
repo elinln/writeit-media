@@ -49,3 +49,26 @@ Blev klar med kundvagnssidan, ska fortsätta med checkouten till Stripe nu.
 23/1 -
 Söndag idag så jag skapade bara Lets Encrypt SSL certifikat och pushade upp mina ändringar så de kommer upp på den hostade sidan. 
 
+24/1 -
+Idag skapade jag först kopplingen till Stripe och sedan skapade jag en databas som jag kopplade till vår backend av sidan. Försökte koppla den till frontend också men ska fortsätta vidare med det. 
+
+25/1 -
+Klar med signup-sida och hela kopplingen till databasen.
+
+26/1 -
+Jag blir helt otroligt frustrerad på Stripe så det har jag suttit med hela dagen och inte kommit någonstans :):):):):)
+
+27/1 - 
+Blev för frustrerad på Stripe så fortsatte med lite databas ändringar och mer text och content på Team & Leadership, FAQ osv.
+
+28/1 -
+Körde halvdag, skulle iväg på eftermiddagen. Gjorde samma som dagen innan. 
+
+31/1 -
+Börjat kolla närmare på Stripe. Kikat runt på vilka källor som är bäst att använda sig av, hittade några bra som jag började testa mig fram med i koden men ska fortsätta mer imon.
+
+1/2 - 
+Idag har jag suttit som en galning med Stripe hela dagen och försöker fortfarande komma fram till en bra lösning, vill använda <PaymentElement> men det pajjar hela appen så får bli <CardElement> om jag inte hittar en bättre lösning som kan koppla till orders.json.
+
+2/2 -
+Idag fick jag äääntligen till så att Stripe fungerar!!! Funderar på hur flödet på hemsidan ska vara med kundvagnen och betalningen, eftersom de är tjänst blir de lite fel att handla flera tjänster och därför känns kundvagnnsidan rätt onödig... Men efter Stripe började fungera fixade jag så att ordrarna sparas i databasen istället för orders.json och att successful/cancelled sidorna efter kundens betalning ser rätt ut och att kunden landar på rätt sida. 
