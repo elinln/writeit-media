@@ -6,6 +6,7 @@ import "../App.css";
 
 
 
+
 export default class Startpage extends Component {
 
     render() {
