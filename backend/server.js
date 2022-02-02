@@ -16,12 +16,12 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
 
-/* 
+
 var corsOptions = {
     origin: "http://localhost:3001"
 };
 
-app.use(cors(corsOptions)); */
+app.use(cors(corsOptions)); 
 
 const workoutRouter = require('./routes/app.routes')
 const usersRouter = require('./routes/users.routes')
