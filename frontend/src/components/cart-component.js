@@ -57,7 +57,7 @@ export default function Cart(props) {
                         </div>
                         <hr />
                         <div style={{ marginLeft: "20%", padding: "3%", width: "50%" }}>
-                            <form action="/checkout/create" method="POST">
+                            <form action="/create-checkout-session" method="POST">
                                 <input name="cartItems" type="hidden" value={JSON.stringify(cartItems)}></input>
                                 <Button variant="success" onClick={() => { saveCart() }} type="submit">
                                     To Checkout

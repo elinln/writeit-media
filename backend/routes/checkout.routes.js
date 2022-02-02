@@ -1,9 +1,11 @@
-const router = require('express').Router();
+/* const router = require('express').Router();
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 
 // TODO: Should be fetched from db/data.js
 const priceDB = { '1': 1000, '2': 3000, '3': 5000, '4': 599 }
 let Orders = require('../models/app.model');
+
+
 
 
 router.route('/create').post((req, res) => {
@@ -49,3 +51,4 @@ router.route('/create').post((req, res) => {
 })
 
 module.exports = router;
+ */
