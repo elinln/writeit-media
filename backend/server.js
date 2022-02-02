@@ -6,13 +6,26 @@ const secretKey = process.env.STRIPE_SECRET_KEY;
 const bodyParser = require("body-parser")
 const port = process.env.PORT || 3000
 const cors = require('cors');
+const whitelist = ["https://localhost:3000"]
+const corsOptions = {
+    origin: function (origin, callback) {
+        if (!origin || whitelist.indexOf(origin) !== -1) {
+          callback(null, true)
+        } else {
+          callback(new Error("Not allowed by CORS"))
+        }
+      },
+      credentials: true,
+
+}
+app.use(cors(corsOptions))
 
 /*app.use(cors());*/
 
-const express = require('express');
+/*const express = require('express');
 const cors = require('cors');
 const app = express();
-app.use(cors())
+app.use(cors())*/
 
 
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -58,9 +71,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const PORT = process.env.PORT || 3000;
 
-var corsOptions = {
+/*var corsOptions = {
     origin: "http://localhost:3001"
-};
+};*/
 
 app.use(cors(corsOptions));
 
