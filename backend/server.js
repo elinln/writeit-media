@@ -18,11 +18,11 @@ app.use(express.json());
 /*const PORT = process.env.PORT || 3000;*/
 
 
-var corsOptions = {
-    origin: "https://writeit-media.herokuapp.com",
-};
+/*var corsOptions = {
+    origin: "http://local",
+};*/
 
-app.use(cors(corsOptions)); 
+/*app.use(cors(corsOptions)); */
 
 const workoutRouter = require('./routes/app.routes')
 const usersRouter = require('./routes/users.routes')
@@ -43,9 +43,9 @@ connection.once('open', () => {
     console.log("MongoDB database connection ok");
 })
 
-/*app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}.`);
-});*/
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}.`);
+});
 
 
 app.post('/create-checkout-session', async (req, res) => {
