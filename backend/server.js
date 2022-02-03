@@ -42,9 +42,9 @@ connection.once('open', () => {
     console.log("MongoDB database connection ok");
 })
 
-app.listen(PORT, () => {
+/*app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
-});
+});*/
 
 
 app.post('/create-checkout-session', async (req, res) => {
