@@ -19,7 +19,7 @@ app.use(express.json());
 
 
 var corsOptions = {
-    origin: "http://localhost:3001",
+    origin: "https://writeit-media.herokuapp.com",
 };
 
 app.use(cors(corsOptions)); 
