@@ -76,7 +76,7 @@ export default class SignUp extends Component {
             signedIn: true
         }
 
-        axios.post("https://writeit-media.herokuapp.com/users/add", user)
+        axios.post("/users/add", user)
             .then(response => {
                 console.log(response.data);
                 localStorage.setItem('username', user.username);
