@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 3000;
 
 
 var corsOptions = {
-    origin: "http://localhost:3001"
+    origin: "https://writeit-media.herokuapp.com:3001",
 };
 
 app.use(cors(corsOptions)); 
