@@ -1,7 +1,7 @@
 {
   "name": "writeitmedia",
   "homepage": "https://writeit-media.herokuapp.com/",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "proxy": "http://localhost:3000",
   "dependencies": {
