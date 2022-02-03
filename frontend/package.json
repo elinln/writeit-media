@@ -1,6 +1,5 @@
 {
   "name": "writeitmedia",
-  "proxy": "http://localhost:3000",
   "homepage": "https://writeit-media.herokuapp.com/",
   "version": "1.0.0",
   "private": true,
