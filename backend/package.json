@@ -1,6 +1,6 @@
 {
   "name": "backend",
-  "homepage": "https:http://writeit-media.herokuapp.com/",
+  "homepage": "https://writeit-media.herokuapp.com/",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
