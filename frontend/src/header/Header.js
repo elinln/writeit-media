@@ -17,6 +17,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Logo from '../assets/damn.png';
 import data from '../data';
+import ShowOrder from '../components/showOrders'
 import Complete from '../components/complete-signup';
 import TermsConditions from '../components/termsConditions-component';
 import PrivacyPolicy from '../components/privacyPolicy-component';
@@ -110,6 +111,7 @@ const Header = () => {
                                 </div>
                             </Container>
                         </Navbar>
+                        <p style={{ marginLeft: "0", color: "#FFDD8F", fontSize: "10px" }}> <b>This is a project for school, we do not actually sell these services.</b></p>
                     </div>
                     <div>
                         <Switch>
@@ -126,6 +128,7 @@ const Header = () => {
                             <Route exact path={"/complete-signUp"} component={Complete} />
                             <Route exact path={"/cancelledOrder"} component={Cancelled} />
                             <Route exact path={"/successfullOrder"} component={Success} />
+                            <Route exact path={"/showOrder"} component={ShowOrder} />
                         </Switch>
                     </div>
                 </div >

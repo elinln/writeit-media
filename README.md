@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+Github repo: https://github.com/elinln/writeit-media 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

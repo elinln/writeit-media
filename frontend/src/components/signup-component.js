@@ -36,6 +36,7 @@ export default class SignUp extends Component {
         });
     }
 
+    // for saving email to database
     onChangeEmail(e) {
         this.setState({
             email: e.target.value
@@ -76,7 +77,7 @@ export default class SignUp extends Component {
             signedIn: true
         }
 
-        axios.post("/users/add", user)
+        axios.post("http://localhost:3000/users/add", user)
             .then(response => {
                 console.log(response.data);
                 localStorage.setItem('username', user.username);
@@ -103,8 +104,6 @@ export default class SignUp extends Component {
             signedIn: true
         })
     }
-
-
 
     rememberCss = {
         marginTop: "8px"

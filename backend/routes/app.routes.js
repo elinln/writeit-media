@@ -13,6 +13,7 @@ router.route('/add').post((req, res) => {
     const description = req.body.description;
     const title = req.body.title;
     const price = req.body.price;
+    const id = req.body.id;
     const published = req.body.published;
 
     const newOrder = new Orders({
@@ -21,6 +22,7 @@ router.route('/add').post((req, res) => {
         description,
         title,
         price,
+        id,
         published,
     });
 

@@ -11,6 +11,8 @@ exports.create = (req, res) => {
 
     // Create a order
     const order = new Order({
+        username: req.body.username,
+        email: req.body.username,
         title: req.body.title,
         description: req.body.description,
         price: req.body.price,
