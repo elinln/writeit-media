@@ -4,16 +4,29 @@ require("dotenv").config()
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 const secretKey = process.env.STRIPE_SECRET_KEY;
 const bodyParser = require("body-parser")
-const cors = require("cors")
 const port = process.env.PORT || 3000
+const cors = require("cors")
 app.use(cors());
+
+/*app.use(express.static("public")); */
+
+
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(express.json());
 
-const PORT = process.env.PORT || 3000;
+/*const PORT = process.env.PORT || 3000;*/
+
 
 const orderRouter = require('./routes/app.routes')
+
+/*var corsOptions = {
+    origin: "http://local",
+};*/
+
+/*app.use(cors(corsOptions)); */
+
+const workoutRouter = require('./routes/app.routes')
 const usersRouter = require('./routes/users.routes')
 const checkoutRouter = require('./routes/checkout.routes')
 app.use('/orders', orderRouter);
@@ -29,8 +42,8 @@ connection.once('open', () => {
     console.log("MongoDB database connection ok");
 })
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}.`);
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}.`);
 });
 
 
@@ -66,9 +79,4 @@ app.post('/create-checkout-session', async (req, res) => {
         })
 })
 
-app.post("/orders/add", (req, res, body) => {
-    if (req.body && req.body.data) {
-        data.push(req.body)
-    }
-    res.status(200).json(data);
-})
+

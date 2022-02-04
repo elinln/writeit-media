@@ -1,9 +1,12 @@
 {
   "name": "backend",
-  "homepage": "https:http://writeit-media.herokuapp.com/",
+  "homepage": "https://writeit-media.herokuapp.com/",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "14.15.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
