@@ -13,7 +13,7 @@ body #magicMouseCursor {
 .appHeader {
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
-  background: #FFDD8F;
+  background: #fade8a;
   color: white;
   box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%), 0 3px 7px 0 rgb(0 0 0 / 10%);
 
@@ -48,5 +48,16 @@ body #magicMouseCursor {
 @media screen and (max-width: 600px) {
   .ourMission {
     font-size: 6em;
+  }
+
+  .products {
+    width: 100%;
+    padding: 0;
+  }
+  .oneProduct {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
   }
 }

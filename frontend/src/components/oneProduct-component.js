@@ -8,7 +8,7 @@ export default function Product(props) {
 
     return (
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", flexWrap: "wrap" }}>
-            <div style={{ backgroundColor: "#FFDD8F", display: "flex", justifyContent: "center", flexDirection: "row", alignItems: "center", width: "75%" }}>
+            <div className="oneProduct" style={{ backgroundColor: "#FFDD8F", display: "flex", justifyContent: "center", flexDirection: "row", alignItems: "center", width: "75%" }}>
                 <Card style={{ margin: "1%", width: "50%", border: "solid 2px #FFDD8F", flexDirection: "column", display: "flex", borderRadius: "10px" }}>
                     <Card.Body>
                         <Card.Title>

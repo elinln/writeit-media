@@ -9,14 +9,16 @@ export default function Complete() {
             <div style={{ color: "#FFDD8F", marginLeft: "20%", padding: "5%", width: "70%" }}>
                 <h1 >
                     <b>
-                        You are signed in!
+                        You are signed up!
                     </b>
                 </h1>
                 <h2>
                     <b>
                         You can now continue to browse the page and make an order.
                     </b>
+
                 </h2>
+                <h5>Thank you!</h5>
 
             </div>
             <div style={{ display: "flex", justifyContent: "center" }}>

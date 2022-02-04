@@ -24,6 +24,7 @@ const Schema = mongoose.Schema;
 
 const order = new Schema({
     username: { type: String, required: true },
+    email: { type: String, required: true },
     title: { type: String, required: true },
     description: { type: String, required: true },
     price: { type: Number, required: true },

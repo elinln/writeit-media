@@ -1,18 +1,22 @@
-import React from 'react';
 import Button from 'react-bootstrap/Button';
+import React, { useEffect } from 'react';
+import { useAlert } from 'react-alert';
+
 
 
 export default function Cart(props) {
-    const { cartItems, /* onAdd, */ onRemove } = props;
+    const { cartItems, onRemove } = props;
     const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
-
+    const alert = useAlert()
 
     const saveCart = () => {
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
         console.log(cartItems)
-
-
     }
+
+    useEffect(() => {
+        alert.show(<div style={{ color: 'whitesmoke' }}>You can choose by signing up to recieve our newsletter and monthly discounts, or continue as a guest...</div>)
+    }, [alert]);
 
     return (
         <aside >
@@ -25,13 +29,9 @@ export default function Cart(props) {
                             <div> <strong>{item.title}</strong></div>
                             <div>
                                 <Button variant="light" onClick={() => onRemove(item)} >
-                                    -
+                                    Remove
                                 </Button>{' '}
-                                {/* <Button variant="light" onClick={() => onAdd(item)} >
-                                    +
-                                </Button> */}
                             </div>
-
                         </div>
                         <div>
                             <strong>

@@ -7,16 +7,18 @@ const bodyParser = require("body-parser")
 const port = process.env.PORT || 3000
 const cors = require("cors")
 app.use(cors());
+
 /*app.use(express.static("public")); */
 
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
-const mongoose = require('mongoose')
 app.use(express.json());
 
 /*const PORT = process.env.PORT || 3000;*/
 
+
+const orderRouter = require('./routes/app.routes')
 
 /*var corsOptions = {
     origin: "http://local",
@@ -26,16 +28,13 @@ app.use(express.json());
 
 const workoutRouter = require('./routes/app.routes')
 const usersRouter = require('./routes/users.routes')
-/* const checkoutRouter = require('./routes/checkout.routes')
- */
-app.use('/tutorials', workoutRouter);
+const checkoutRouter = require('./routes/checkout.routes')
+app.use('/orders', orderRouter);
 app.use('/users', usersRouter);
-/* app.use('/checkout', checkoutRouter)
- */
-const priceDB = { '1': 1000, '2': 3000, '3': 5000, '4': 599 }
+app.use('/checkout', checkoutRouter);
 
 
-
+const mongoose = require('mongoose')
 const uri = process.env.ATLAS_URI;
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 const connection = mongoose.connection;
@@ -47,6 +46,8 @@ app.listen(port, () => {
     console.log(`Server is running on port ${port}.`);
 });
 
+
+const priceDB = { '1': 1000, '2': 3000, '3': 5000, '4': 599 }
 
 app.post('/create-checkout-session', async (req, res) => {
     const cartItems = JSON.parse(req.body.cartItems);
@@ -72,7 +73,6 @@ app.post('/create-checkout-session', async (req, res) => {
         cancel_url: 'http://localhost:3001/cancelledOrder',
     }).then(session => {
         res.redirect(303, session.url);
-
     })
         .catch(error => {
             console.error("wrooooonggg:", error)

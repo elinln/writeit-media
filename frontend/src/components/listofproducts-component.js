@@ -1,5 +1,6 @@
 import React from "react";
 import Product from './oneProduct-component';
+import '../App.css'
 
 export default function Products(props) {
 
@@ -24,7 +25,7 @@ export default function Products(props) {
                     </b>
                 </p>
             </div>
-            <div>
+            <div className="products">
                 {products.map((product) => (
                     <Product key={product.id} product={product} onAdd={onAdd}></Product>
                 ))}
